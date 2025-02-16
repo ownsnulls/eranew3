@@ -406,7 +406,7 @@ async def handler(message: types.Message):
 
             async with session.post(f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={key}", json=data) as response:
                 try:
-                    msg = (await response.json())["candidates"][0]["content"]["parts"][0]["text"].replace("**", "")
+                    msg = (await response.json())["candidates"][0]["content"]["parts"][0]["text"].replace("*", "")
                     if msg.count("```") % 2 != 0:
                         msg += "```"
                     await message.reply(msg, parse_mode="Markdown")
