@@ -96,7 +96,7 @@ async def handler(message: types.Message):
             data = {
               "system_instruction": {
                 "parts": {
-                  "text": """Говори в молодëжном сленге.
+                  "text": """Обязательно общайся в молодëжном сленге.
 
 Ты обязан использовать эти слова:
 Бля
